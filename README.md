@@ -90,7 +90,6 @@ project
 ├── docs/
 │ └── design.pdf # Datapath and pipeline diagram
 │
-├── build_commands.txt # Toolchain commands
 └── README.md
 ```
 ---
@@ -134,7 +133,7 @@ riscv64-unknown-elf-objcopy -O verilog test.elf test.hex
 
 ## Simulation (Verilator)
 ```bash
-# Build the Simulation Executable
+# Build the Simulation Executable 
 verilator -Wall --sv --timing --trace \
   --cc tb/tb_processor.sv rtl/*.sv \
   --top-module tb_processor \
